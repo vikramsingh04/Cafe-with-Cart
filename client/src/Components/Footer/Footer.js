@@ -46,8 +46,9 @@ export default function Footer() {
                 VIT-Cafeteria
               </h6>
               <p>
-                Simplifying VIT student's life  by providing a platform for food ordering and delivery.
-                The prices are up to date and are  provided directly from the vendors themselves.
+                Simplifying VIT student's life by providing a platform for food
+                ordering and delivery. The prices are up to date and are
+                provided directly from the vendors themselves.
               </p>
             </MDBCol>
 
@@ -123,20 +124,11 @@ export default function Footer() {
               </p>
               <p>
                 <Link
-                  to="https://www.linkedin.com/in/suryansh-pandey-67b195216/"
-                  target="_blank"
-                  className="text-reset"
-                >
-                  Suryansh Pandey
-                </Link>
-              </p>
-              <p>
-                <Link
                   to="https://www.linkedin.com/in/aryan-raj-555768252/"
                   target="_blank"
                   className="text-reset"
                 >
-                  Aryan Raj
+                  Vikram Singh
                 </Link>
               </p>
             </MDBCol>
@@ -144,10 +136,7 @@ export default function Footer() {
         </MDBContainer>
       </section>
 
-      <div
-        className="text-center p-4"
-        style={{ backgroundColor: "#7C007C" }}
-      >
+      <div className="text-center p-4" style={{ backgroundColor: "#7C007C" }}>
         © {new Date().getFullYear()} Copyright:&nbsp;
         <Link className="text-reset fw-bold" to="/">
           VIT-Cafeteria
