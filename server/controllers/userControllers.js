@@ -224,16 +224,18 @@ exports.getAllDish = async (req, res) => {
   try {
     const { shop } = req.body;
 
-    let shopData = await dish.findOne({ shop })
+    let shopData = await dish.findOne({ shop });
     if (!shopData) {
-      res.status(400).json({ message: "No such shop exist" })
+      res.status(400).json({ message: "No such shop exist" });
     } else {
-      res.status(200).json({ message: "Shop exist", content: shopData.content })
+      res
+        .status(200)
+        .json({ message: "Shop exist", content: shopData.content });
     }
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-}
+};
 
 exports.Dish = async (req, res) => {
   try {
@@ -348,7 +350,6 @@ exports.getCartItem = async (req, res) => {
   }
 };
 
-
 exports.deleteCartItem = async (req, res) => {
   try {
     const { userId, itemId } = req.body;
@@ -364,11 +365,11 @@ exports.deleteCartItem = async (req, res) => {
 
     // Decrease total price and quantity
     const deletedItemPrice = cartItem.price;
-    console.log(deletedItemPrice)
+    console.log(deletedItemPrice);
     user.totalPrice -= deletedItemPrice;
     user.totalItems -= 1;
-    console.log(user.totalPrice)
-    console.log(user.totalItems)
+    console.log(user.totalPrice);
+    console.log(user.totalItems);
 
     // Delete item from cart
 

@@ -6,7 +6,7 @@ export const addDish = async (data) => {
 };
 
 export const addToCart = async (data) => {
-  return await commonrequest("POST", `${BACKEND_URL}/user/addtocart`, { data });
+  return await commonrequest("POST", `${BACKEND_URL}/user/addtocart`, data);
 };
 
 export const getCartItems = async (data) => {
